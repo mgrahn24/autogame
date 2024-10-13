@@ -65,11 +65,11 @@ def unit_selection_phase(screen, player_team):
                 pygame.quit()
                 exit()
             elif event.type == pygame.KEYDOWN:
-                if event.key in [pygame.K_1, pygame.K_2, pygame.K_3]:
+                if event.key in [pygame.K_1, pygame.K_2, pygame.K_3, pygame.K_4,pygame.K_5]:
                     selected_unit = unit_options[event.key - pygame.K_1]
                     
                     # Add unit to the team if there's space
-                    if selected_unit not in selected_units and len(player_team) < 3:
+                    if selected_unit not in selected_units and len(player_team) < 5:
                         selected_units.append(selected_unit)
                         player_team.append(selected_unit)
 
